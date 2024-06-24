@@ -1,7 +1,6 @@
 #! /bin/bash
 
-HOME_DIR="/home/kicad"
-APP_DIR="$HOME_DIR/app"
+APP_DIR="/app"
 SCRIPT_DIR="$APP_DIR/scripts"
 
 nohup python3 "$SCRIPT_DIR/cli_srv.py" &
