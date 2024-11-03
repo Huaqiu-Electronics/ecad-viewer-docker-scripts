@@ -14,8 +14,16 @@ def export_glb(in_fp):
     docker_output_fn = os.path.join(kicad_project_dir, output_file_name).replace("\\", "/")
 
     first_cmd = ["kicad-cli", "pcb",
-                 "export", "glb", "--subst-models", "--include-tracks",
-                 in_fp, "-o",
+                "export", 
+                 "glb", 
+                 "--subst-models",
+                 "--include-tracks", 
+                 "--include-soldermask", 
+                 "--include-pads", 
+                 "--include-zones",
+                 "--include-silkscreen",
+                 in_fp, 
+                 "-o",
                  docker_output_fn
                  ]
     print(" ".join(first_cmd))
